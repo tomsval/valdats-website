@@ -6,7 +6,7 @@
     $: h = time.getHours();
     $: m = time.getMinutes();
     $: s = time.getSeconds();
-    $: dd = time.getDay();
+    $: dd = time.getDate;
     $: mm = time.getMonth();
     $: yyyy = time.getFullYear();
 
@@ -41,6 +41,7 @@
 
     .index-component {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
