@@ -6,7 +6,7 @@
     $: h = time.getHours();
     $: m = time.getMinutes();
     $: s = time.getSeconds();
-    $: dd = time.getDate;
+    $: dd = time.getDate();
     $: mm = time.getMonth();
     $: yyyy = time.getFullYear();
 
