@@ -24,9 +24,11 @@
 
 <div class="index-component">
     <h1>valdats.id.lv</h1>
+    <div class="break"></div>
     <p class="time-display">
         {h} : {m} . {s}
     </p>
+    <div class="break"></div>
     <p class="date-display">
         {yyyy} - {mm} - {dd}
     </p>
@@ -41,6 +43,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .break {
+        flex-basis: 100%;
+        height: 2em;
     }
 
     .time-display {
