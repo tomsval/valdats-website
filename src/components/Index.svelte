@@ -1,6 +1,35 @@
+<script lang="ts">
+	import { onMount } from "svelte";
+
+    let time = new Date();
+
+    $: h = time.getHours();
+    $: m = time.getMinutes();
+    $: s = time.getSeconds();
+    $: dd = time.getDay();
+    $: mm = time.getMonth();
+    $: yyyy = time.getFullYear();
+
+
+    onMount(() => {
+        const interval = setInterval(() => {
+            time = new Date;
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    });
+</script>
 
 <div class="index-component">
     <h1>valdats.id.lv</h1>
+    <p class="time-display">
+        {h} : {m} : {s}
+    </p>
+    <p class="date-display">
+        {yyyy}-{mm}-{dd}
+    </p>
 </div>
 
 <style>
@@ -12,5 +41,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .time-display {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+    }
+
+    .date-display {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: medium;
     }
 </style>
