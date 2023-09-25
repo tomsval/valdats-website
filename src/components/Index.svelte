@@ -25,10 +25,10 @@
 <div class="index-component">
     <h1>valdats.id.lv</h1>
     <p class="time-display">
-        {h} : {m} : {s}
+        {h} : {m} . {s}
     </p>
     <p class="date-display">
-        {yyyy}-{mm}-{dd}
+        {yyyy} - {mm} - {dd}
     </p>
 </div>
 
@@ -45,6 +45,7 @@
 
     .time-display {
         font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
         font-size: large;
     }
 
