@@ -23,7 +23,7 @@
 </script>
 
 <div class="index-component">
-    <h1>valdats.id.lv</h1>
+    <p class="title">valdats.id.lv</p>
     <div class="break"></div>
     <p class="time-display">
         {h} : {m} . {s}
@@ -35,8 +35,11 @@
 </div>
 
 <style>
-    h1 {
-        font-family: Arial, Helvetica, sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Sono:wght@400;500&display=swap');
+
+    .title {
+        font-family: "Flow Circular", sans-serif;
+        font-size: 24pt;
     }
 
     .index-component {
@@ -52,13 +55,14 @@
     }
 
     .time-display {
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-        font-size: large;
+        font-family: "Sono", Courier, monospace;
+        font-weight: 500;
+        font-size: 72pt;
     }
 
     .date-display {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: medium;
+        font-family: "Sono", Courier, monospace;
+        font-weight: 400;
+        font-size: 32pt;
     }
 </style>
