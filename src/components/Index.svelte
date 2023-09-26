@@ -1,6 +1,36 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+    import { onMount } from "svelte";
 
+    // NTP time experiment
+    // import { Client } from "ntp-time";
+
+    // const ntp_client = new Client("0.pool.ntp.org", 123, { timeout: 5000 });
+
+    // async function sync_ntp(): Promise<void> {
+    //     try {
+    //         await ntp_client.syncTime();
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
+
+    // $: {    
+    //     (async() => {
+    //         await sync_ntp();
+    //         const ntp_time = async () => {
+    //             ntp_client.syncTime()
+    //             .then(time => {
+    //                 return time;
+    //             })
+    //             .catch(console.log)
+    //         }
+    //         const ntp_date = await ntp_time();
+    //         console.log(ntp_date);
+
+    //     });
+    // }
+
+    // Local time
     let time = new Date();
 
     $: h = time.getHours();
@@ -23,8 +53,6 @@
 </script>
 
 <div class="index-component">
-    <p class="title">valdats.id.lv</p>
-    <div class="break"></div>
     <p class="time-display">
         {h} : {m} . {s}
     </p>
@@ -32,6 +60,8 @@
     <p class="date-display">
         {yyyy} - {mm} - {dd}
     </p>
+    <div class="break"></div>
+    <p class="title">valdats.id.lv</p>
 </div>
 
 <style>
@@ -39,7 +69,7 @@
 
     .title {
         font-family: "Flow Circular", sans-serif;
-        font-size: 24pt;
+        font-size: 2vw;
     }
 
     .index-component {
@@ -51,18 +81,18 @@
 
     .break {
         flex-basis: 100%;
-        height: 2em;
+        height: 2vw;
     }
 
     .time-display {
         font-family: "Sono", Courier, monospace;
         font-weight: 500;
-        font-size: 72pt;
+        font-size: 6vw;
     }
 
     .date-display {
         font-family: "Sono", Courier, monospace;
         font-weight: 400;
-        font-size: 32pt;
+        font-size: 5vw;
     }
 </style>
