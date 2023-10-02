@@ -44,6 +44,7 @@
     onMount(() => {
         const interval = setInterval(() => {
             time = new Date;
+            console.log(time.getMonth());
         }, 1000);
 
         return () => {
@@ -58,7 +59,7 @@
     </p>
     <div class="break"></div>
     <p class="date-display">
-        {yyyy} - {mm} - {dd}
+        {yyyy} - {mm + 1} - {dd}
     </p>
     <div class="break"></div>
     <p class="title">valdats.id.lv</p>
